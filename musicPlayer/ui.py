@@ -17,25 +17,7 @@ class musicPlayer(QMainWindow):
     playBtn.move(210,50)
     playBtn.clicked.connect(self.play)
 
-    backwardBtn = QPushButton("Backward",self)
-    backwardBtn.resize(60,30)
-    backwardBtn.move(120,50)
-    backwardBtn.clicked.connect(self.back)
-
-    forwardBtn = QPushButton("Forward",self)
-    forwardBtn.resize(60,30)
-    forwardBtn.move(300,50)
-    forwardBtn.clicked.connect(self.forward)
-
-    shuffleBtn = QPushButton("Shuffle",self)
-    shuffleBtn.resize(60,30)
-    shuffleBtn.move(30,50)
-    shuffleBtn.clicked.connect(self.shuffle)
-
-    loopBtn = QPushButton("Loop",self)
-    loopBtn.resize(60,30)
-    loopBtn.move(390,50)
-    loopBtn.clicked.connect(self.loop)
+    
 
     self.label = QLabel("Choose File",self)
     self.label.resize(450,30)
@@ -49,17 +31,7 @@ class musicPlayer(QMainWindow):
        self.label.setText("Playing "+str(name))
        playsound(str(name))
 
-   def back(self):
-    pass
-
-   def forward(self):
-    pass
-    
-   def shuffle(self):
-    pass
-
-   def loop(self):
-    pass
+  
 
 app = QApplication(sys.argv)
 gui = musicPlayer()
